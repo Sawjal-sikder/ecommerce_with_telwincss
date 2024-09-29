@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50">
+  <header class="bg-blue-100 px-4 sm:px-10 py-4">
+    <div class="container mx-auto flex items-center justify-between">
+      <!-- Logo -->
+      <div class="text-3xl font-bold text-sky-800">
+        <a href="#" aria-label="Home">LOGO</a>
+      </div>
+      <!-- Menu (adjust for mobile view) -->
+      <nav class="hidden md:flex space-x-8">
+        <a href="#" class="text-gray-700 hover:text-sky-800">Category</a>
+        <a href="#" class="text-gray-700 hover:text-sky-800">Logout</a>
+      </nav>
+      <!-- Mobile Menu Icon -->
+      <div class="md:hidden">
+        <button aria-label="Open Menu" class="text-gray-700">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+</body>
+</html>
