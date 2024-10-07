@@ -1,31 +1,146 @@
 <!doctype html>
+{% load static %}
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css"/>
+
+
 </head>
 <body class="bg-slate-50">
-  <header class="bg-blue-100 px-4 sm:px-10 py-4">
+<header class="bg-blue-100 px-4 sm:px-10 py-4">
     <div class="container mx-auto flex items-center justify-between">
-      <!-- Logo -->
-      <div class="text-3xl font-bold text-sky-800">
-        <a href="#" aria-label="Home">LOGO</a>
-      </div>
-      <!-- Menu (adjust for mobile view) -->
-      <nav class="hidden md:flex space-x-8">
-        <a href="#" class="text-gray-700 hover:text-sky-800">Category</a>
-        <a href="#" class="text-gray-700 hover:text-sky-800">Logout</a>
-      </nav>
-      <!-- Mobile Menu Icon -->
-      <div class="md:hidden">
-        <button aria-label="Open Menu" class="text-gray-700">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
-          </svg>
-        </button>
-      </div>
+        <!-- Logo -->
+        <div class="text-3xl font-bold text-sky-800">
+            <a href="#" aria-label="Home">LOGO</a>
+        </div>
+        <!-- Menu (adjust for mobile view) -->
+        <nav class="hidden md:flex space-x-8 font-semibold ">
+            <a href="#" class="text-gray-700 hover:text-sky-800 hover:underline underline-offset-8 ">Home</a>
+            <a href="#" class="text-gray-700 hover:text-sky-800 hover:underline underline-offset-8 ">Service</a>
+            <a href="#" class="text-gray-700 hover:text-sky-800 hover:underline underline-offset-8 ">Category</a>
+            <a href="#" class="text-gray-700 hover:text-sky-800 hover:underline underline-offset-8 ">About</a>
+        </nav>
+        <nav class="hidden md:flex space-x-8">
+            <a href="/logout" class="flex items-center space-x-2 text-gray-700 hover:text-gray-900">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </nav>
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden">
+            <button aria-label="Open Menu" class="text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+                </svg>
+            </button>
+        </div>
     </div>
-  </header>
+</header>
+
+
+<div class="flex">
+    <div class=" w-2/6 drop-shadow-lg  px-5 py-2">
+        <p class="font-semibold text-2xl text-center border-b-4 border-slate-500 py-2">Category</p>
+        <ul class="menu ">
+            <li>
+                <a>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                        <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                    </svg>
+                    Item 2
+                </a>
+            </li>
+            <li>
+                <a>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                        <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Item 1
+                </a>
+            </li>
+            <li>
+                <a>
+                    <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            class="h-5 w-5"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor">
+                        <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+                    </svg>
+                    Item 3
+                </a>
+            </li>
+        </ul>
+
+    </div>
+    <div class="bg-white w-full px-5 py-2"><div class="carousel w-full">
+  <div id="slide1" class="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+      class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide4" class="btn btn-circle">❮</a>
+      <a href="#slide2" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide2" class="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+      class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide1" class="btn btn-circle">❮</a>
+      <a href="#slide3" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide3" class="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+      class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide2" class="btn btn-circle">❮</a>
+      <a href="#slide4" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+  <div id="slide4" class="carousel-item relative w-full">
+    <img
+      src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+      class="w-full" />
+    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+      <a href="#slide3" class="btn btn-circle">❮</a>
+      <a href="#slide1" class="btn btn-circle">❯</a>
+    </div>
+  </div>
+</div></div>
+</div>
+
+
 </body>
 </html>
