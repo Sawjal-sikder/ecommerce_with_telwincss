@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %} Home Page {% endblock %}
+{% block contain %}
+
+<div class="flex">
+    <div class=" w-2/6 drop-shadow-lg   py-2 bg-blue-50 h-[30rem] overflow-y-auto">
+        <p class="font-semibold text-2xl text-center border-b-2 border-slate-500 py-2 text-white bg-sky-900 ">Category</p>
+        <ul class="menu pl-5 bg-sky-100 ">
+            {% for category in categories %}
+            <li class="text-gray-700 hover:bg-sky-900 hover:text-white border-b-2 border-white">
+                <a>
+                    <i class="{{ category.icon }}"></i>
+                    <p>{{ category.name }}</p>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div class="bg-white w-full px-2 py-2 ">
+        <div class="carousel w-full h-[30rem]">
+            <div id="slide1" class="carousel-item relative w-full">
+                <img
+                        src="https://img.daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.webp"
+                        class="w-full"/>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide4" class="btn btn-circle">❮</a>
+                    <a href="#slide2" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide2" class="carousel-item relative w-full">
+                <img
+                        src="https://img.daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.webp"
+                        class="w-full"/>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide1" class="btn btn-circle">❮</a>
+                    <a href="#slide3" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide3" class="carousel-item relative w-full">
+                <img
+                        src="https://img.daisyui.com/images/stock/photo-1414694762283-acccc27bca85.webp"
+                        class="w-full"/>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide2" class="btn btn-circle">❮</a>
+                    <a href="#slide4" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+            <div id="slide4" class="carousel-item relative w-full">
+                <img
+                        src="https://img.daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.webp"
+                        class="w-full"/>
+                <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
+                    <a href="#slide3" class="btn btn-circle">❮</a>
+                    <a href="#slide1" class="btn btn-circle">❯</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+
